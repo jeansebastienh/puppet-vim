@@ -2,15 +2,17 @@ vim
 
 This is the vim module.
 
-License
--------
+## Example
 
+This module will try to install vim via the package `vim-enhanced` (CentOS 6.x) and will allow the configuration of git for all users.
 
-Contact
--------
+It will also make vim modular with pathogen.
 
+```puppet
+# To install vim
+class { 'vim': }
 
-Support
--------
+# To configure
 
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+vim::configure {'syntax': str => 'syntax on' }
+```
